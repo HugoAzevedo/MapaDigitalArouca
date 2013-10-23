@@ -43,8 +43,8 @@ public:
 
 	virtual void escreve(ostream &out) const;
 	InteresseTuristico * clone() const;
-	//virtual void inserirLocaisIntTur(InteresseTuristico * locais); //Metodo para inserir locais de interesse turistico (Pedido- 2)
-	//virtual void contarLocaisIntTur() const; //Metodo para contabilizar os locais de interesse turistico (Pedido- 3)
+	virtual void inserirLocaisIntTur(InteresseTuristico * locais); //Metodo para inserir locais de interesse turistico (Pedido- 2)
+	virtual void contarLocaisIntTur() const; //Metodo para contabilizar os locais de interesse turistico (Pedido- 3)
 	
 	//End Metodos
 
@@ -118,21 +118,21 @@ ostream& operator << (ostream &out, const InteresseTuristico &it){
 //End Sobrecarga de operadores
 
 //Metodo para contabilizar vias de ligação (Pedido- 3)
-//void InteresseTuristico::contarLocaisIntTur() const
-//{
-//	int historicos = 0;
-//	int naturais = 0;
-//
-//	for (int i=0; i<actual; i++)
-//	{
-//		if (typeid(*vec[i]) == typeid(TuristicoNaturais)) historicos++;
-//		if (typeid(*vec[i]) == typeid(Turistico_Hist_Cult)) naturais++;
-//	}
-//	
-//	cout << "Total de Locais" << endl;
-//	cout << "::::::::::Locais Naturais: " << historicos << " vias." << endl;
-//	cout << "::::::::::Locais Historicos Naturais: " << naturais << " vias." << endl;
-//}
+void InteresseTuristico::contarLocaisIntTur() const
+{
+	int historicos = 0;
+	int naturais = 0;
+
+	for (int i=0; i<actual; i++)
+	{
+		if (typeid(*(vec[i])) == typeid(TuristicoNaturais)) historicos++;
+		if (typeid(*(vec[i])) == typeid(Turistico_Hist_Cult)) naturais++;
+	}
+	
+	cout << "Total de Locais" << endl;
+	cout << "::::::::::Locais Naturais: " << historicos << " vias." << endl;
+	cout << "::::::::::Locais Historicos Naturais: " << naturais << " vias." << endl;
+}
 
 //Metodo Escreve *****Verificar/N está como pedido*****
 void InteresseTuristico::escreve(ostream &out) const{
