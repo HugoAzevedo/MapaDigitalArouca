@@ -83,6 +83,7 @@
   <ItemGroup>
     <ClInclude Include="AutoEstrada.h" />
     <ClInclude Include="EstradaNacional.h" />
+    <ClInclude Include="Ficheiro.h" />
     <ClInclude Include="InteresseTuristico.h" />
     <ClInclude Include="TuristicoNaturais.h" />
     <ClInclude Include="Turistico_Hist_Cult.h" />

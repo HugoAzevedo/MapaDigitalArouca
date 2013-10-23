@@ -29,7 +29,7 @@ private:
 public:
 
 	//Construtores
-	ViaLigacao(); //C1
+	ViaLigacao(); //Construtores
 	ViaLigacao(const InteresseTuristico &o, const InteresseTuristico &d,string cdvia, float tkms, int tMed);//C2
 	ViaLigacao(const ViaLigacao &v);//C3
 	virtual ~ViaLigacao();//CDestrutor
